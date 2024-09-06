@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'game-of-squids': ['Game of Squids', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

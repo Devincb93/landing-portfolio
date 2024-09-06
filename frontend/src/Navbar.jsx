@@ -4,11 +4,11 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
-import { useNavigate } from 'react-router-dom';
+
 
 function NavBar() {
 
-    const navigate = useNavigate()
+    
     return (
         <div className='py-1 flex m-1 flex-row-reverse'>
             <div className='m-1 text-[#cae9ff] hover:scale-150'>

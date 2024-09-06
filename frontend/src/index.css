@@ -4,5 +4,17 @@
 
 :root {
   background: #001427;
-  color:whitesmoke;
+  color:#cae9ff;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Game of Squids';
+  src: url('./assets/Game Of Squids.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-font {
+  font-family: 'Game of Squids', sans-serif;
 }
