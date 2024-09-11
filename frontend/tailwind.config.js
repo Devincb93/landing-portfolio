@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'game-of-squids': ['Game of Squids', 'sans-serif'],
+        
+        'neuropol': ['Neuropol', 'sans-serif'],
       },
     },
   },

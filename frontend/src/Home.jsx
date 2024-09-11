@@ -5,7 +5,7 @@ import Projects from './Projects';
 function Home() {
     return (
         <div>
-        <h1 className='text-center text-[#cae9ff] font-game-of-squids text-4xl '>
+        <h1 className='text-center m-2 font-neuropol text-3xl mb-10 '>
             {/* <TypeAnimation
              sequence={[
                 // Same substring at the start will only be typed out once, initially

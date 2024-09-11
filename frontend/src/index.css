@@ -3,18 +3,21 @@
 @tailwind utilities;
 
 :root {
-  background: #001427;
-  color:#cae9ff;
+  background-color: black;
+  color: white;
   text-align: center;
 }
 
+
+
 @font-face {
-  font-family: 'Game of Squids';
-  src: url('./assets/Game Of Squids.otf') format('opentype');
+  font-family: 'Neuropol';
+  src: url('./assets/neuropol x rg.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 .custom-font {
-  font-family: 'Game of Squids', sans-serif;
+  font-family: 'Neuropol', sans-serif;
 }
+

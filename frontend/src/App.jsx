@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div >
        <NavBar/>
        <Home/>
        <AboutMe/>
@@ -24,3 +24,4 @@ function App() {
 }
 
 export default App
+
