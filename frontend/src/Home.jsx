@@ -1,5 +1,5 @@
 import React from 'react'
-import { TypeAnimation } from 'react-type-animation';
+
 import Projects from './Projects';
 
 function Home() {
