@@ -23,6 +23,9 @@ function NavBar() {
             <div className='m-1  hover:scale-150'>
                 <FaLinkedin onClick={()=> {window.open('https://www.linkedin.com/in/devin-burkett-b02b83a1/')}}/>
             </div>
+            <div>
+                <p className='m-1 hover:scale-125 font-neuropol text-[9px]'>Resume</p>
+            </div>
         </div>
     )
 }
