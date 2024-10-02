@@ -33,7 +33,7 @@ function Projects(){
                 <iframe className='m-1 mx-auto w-60 h-32' src="https://www.youtube.com/embed/yCRbWpJ0EYE?si=-56hLG3Ro-MKRrKS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
-                <p>this one</p>
+                
                 <iframe className='m-1 mx-auto w-60 h-32' src="https://www.youtube.com/embed/ugzF019kEkw?si=3SkKEeyy7qhWIcgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div>
@@ -44,7 +44,7 @@ function Projects(){
         </div>
         <div>
         
-        <iframe className='m-1 mx-auto w-60 h-32' src="https://www.youtube.com/embed/7WuaI1rrMUk?si=Pb2jFmNlaZo339Kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe className='m-1 mx-auto w-60 h-32 -mt-56 md:mb-56' src="https://www.youtube.com/embed/7WuaI1rrMUk?si=Pb2jFmNlaZo339Kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
            </div> 
     )
