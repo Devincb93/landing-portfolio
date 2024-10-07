@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutMe() {
     return (
-        <div className=' rounded-sm mt-56'>
+        <div className=' rounded-sm mt-6'>
             <h1>About</h1>
             <p className=' text-sm'>My tech journey kicked off when I took apart my first computer, a Macintosh, and managed to put it back together, igniting my passion for all things tech. Now, as a software engineer skilled in Python, JavaScript, Flask, SQL, and React, I thrive on the thrill of building creative solutions from scratch.</p>
             <br/>
