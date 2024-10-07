@@ -1,10 +1,9 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './index.css'
+import HomeContainer from './HomeContainer'
+import Resume from './Resume';
+import ContactMe from './ContactMe';
 
-
-import viteLogo from '/vite.svg'
- import Home from './Home'
- import NavBar from './Navbar'
- import AboutMe from './Aboutme'
- import './index.css'
 
 
 function App() {
@@ -13,9 +12,13 @@ function App() {
   return (
     <>
       <div >
-       <NavBar/>
-       <Home/>
-       <AboutMe/>
+      
+      <Routes>
+        <Route path="/" element={<HomeContainer />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<ContactMe/>}/>
+      </Routes>
+    
 
       </div>
       

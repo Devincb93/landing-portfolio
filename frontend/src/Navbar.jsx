@@ -4,6 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 
 function NavBar() {
@@ -24,7 +25,10 @@ function NavBar() {
                 <FaLinkedin onClick={()=> {window.open('https://www.linkedin.com/in/devin-burkett-b02b83a1/')}}/>
             </div>
             <div>
-                <p className='m-1 hover:scale-125 font-neuropol text-[9px]'>Resume</p>
+                
+                    <Link to="resume">
+                    <p className='m-1 hover:scale-125 font-neuropol text-[9px]'>Resume</p>
+                    </Link>
             </div>
         </div>
     )

@@ -3,20 +3,23 @@ import React from 'react'
 function AboutMe() {
     return (
         <div className=' rounded-sm mt-56'>
-            <p className=' text-sm'>Born and raised in South Georgia, my journey in technology began long before I moved from the warmth of the South to the innovative heartland of California. After spending a few formative years in Florida, where my fascination with technology took root, I've now been nestled in California for the past 4-5 years, immersing myself in its vibrant tech scene and culture of innovation.</p>
+            <h1>About</h1>
+            <p className=' text-sm'>My tech journey kicked off when I took apart my first computer, a Macintosh, and managed to put it back together, igniting my passion for all things tech. Now, as a software engineer skilled in Python, JavaScript, Flask, SQL, and React, I thrive on the thrill of building creative solutions from scratch.</p>
             <br/>
             <p className=' text-sm'>
-            As an entry-level software engineer, I find myself constantly driven by the desire to learn and grow within this ever-evolving field. My background has instilled in me a resilient work ethic and a unique perspective on the challenges and opportunities that lie within the tech industry.
+            As an entry-level software engineer, I’m fueled by a relentless desire to learn and grow in this ever-evolving field. My experiences have shaped a strong work ethic and a unique perspective on tackling challenges in the tech world.
+
             </p>
             <br/>
             <p className=' text-sm'>
             Currently, I am honing my skills and expanding my knowledge base, embracing both the theoretical aspects of software engineering and the practical application of those theories in real-world scenarios. My journey from the East Coast to the West has been more than just a physical relocation; it has been a transformative experience that has shaped my approach to problem-solving and innovation in technology.
             </p>
             <br/>
-            <p className=' text-sm'>I am passionate about leveraging my budding skills in software engineering to contribute to meaningful projects and make a positive impact. While I am still at the beginning of my professional journey, I am eager to collaborate with like-minded individuals and teams who are committed to pushing the boundaries of what's possible in technology.
+            <p className=' text-sm'>Right now, I'm all about expanding my skill set and applying what I learn in real-world scenarios. I'm excited to use my developing skills to contribute to meaningful projects that make a positive impact. While I'm just starting out, I can't wait to collaborate with like-minded folks who are just as passionate about pushing the boundaries of technology.
+
             </p>
             <br/>
-            <p className=' text-sm'>In summary, I bring to the table a unique blend of geographic diversity, a relentless pursuit of knowledge, and a sincere commitment to contributing to the tech industry in meaningful ways. I am excited about the opportunities that lie ahead and am eager to continue my journey as a software engineer, learning, growing, and making a difference along the way.</p>
+            <p className=' text-sm'>In a nutshell, I bring a curious mindset, a strong commitment to learning, and a genuine desire to make a difference in the tech industry. I'm looking forward to the opportunities ahead and eager to keep growing as a software engineer. Feel free to reach out</p>
         </div>
     )
 }
