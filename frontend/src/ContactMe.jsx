@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { IoWarningOutline } from "react-icons/io5";
+
 
 function ContactMe() {
     return (
@@ -21,7 +21,7 @@ function ContactMe() {
                 
                 <button type="submit">Send Message</button>
                 <Link to='/'>
-                <button>Go Back</button>
+                <button className='bg-green-800 rounded-md hover:bg-green-950'>Go Back</button>
                 </Link>
             </form>
         </div>
