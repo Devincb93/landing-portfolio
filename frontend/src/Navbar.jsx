@@ -25,10 +25,12 @@ function NavBar() {
                 <FaLinkedin onClick={()=> {window.open('https://www.linkedin.com/in/devin-burkett-b02b83a1/')}}/>
             </div>
             <div>
-                
-                    <Link to="resume">
+                <Link to="resume">
                     <p className='m-1 hover:scale-125 font-neuropol text-[9px]'>Resume</p>
-                    </Link>
+                </Link>
+            </div>
+            <div className='m-1 hover:scale-125 font-neuropol text-[9px]'>
+                    <Link to="contact">Contact Me</Link>
             </div>
         </div>
     )
