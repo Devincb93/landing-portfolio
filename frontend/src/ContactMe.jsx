@@ -1,22 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { use } from 'react'
 
 
 function ContactMe() {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    const handleSubmit = () => {
+        e.preventDefault()
+        const compiledMessage = {name, email, message}
+    }
     return (
         <div >
-            <form className='flex flex-col bg-[#9abca7] '>
+            <form onSubmit={() => {handleSubmit()}} className='flex flex-col bg-[#9abca7] '>
                 <div className='m-4 ' >
                     <label className='items-center' htmlFor="name">Name:</label>
-                    <input  type="text" id="name" name="name" required />
+                    <input className='text-black ' onChange={(e) => setName(e.target.value)}  type="text" id="name" name="name" value={name} required />
                 </div>
                 <div className='m-4'>
                     <label className='items-center' htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
+                    <input className='text-black' onChange={(e)=> setEmail(e.target.value)} type="email" id="email" name="email" required />
                 </div>
                 <div className='m-4'>
                     <label className='items-center' htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea className='text-black' onChange={(e)=> setMessage(e.target.value)} id="message" name="message" required></textarea>
                 </div>
                 
                 <button type="submit">Send Message</button>
