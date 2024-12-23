@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { use } from 'react'
+
 
 
 function ContactMe() {
@@ -10,13 +10,33 @@ function ContactMe() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
 
-    const handleSubmit = () => {
-        e.preventDefault()
-        const compiledMessage = {name, email, message}
-    }
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        const data = { name, email, message };
+        console.log('Sending data:', data); // Log data before sending
+    
+        try {
+            const response = await fetch('http://localhost:5000/api/messages', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+    
+            console.log('Server response:', response); // Log server response
+            if (response.ok) {
+                alert('Message sent successfully!');
+            } else {
+                alert('Failed to send the message.');
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Error sending the message.');
+        }
+    };
     return (
         <div >
-            <form onSubmit={() => {handleSubmit()}} className='flex flex-col bg-[#9abca7] '>
+            <form onSubmit= {handleSubmit} className='flex flex-col bg-[#9abca7] '>
                 <div className='m-4 ' >
                     <label className='items-center' htmlFor="name">Name:</label>
                     <input className='text-black ' onChange={(e) => setName(e.target.value)}  type="text" id="name" name="name" value={name} required />
