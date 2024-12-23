@@ -1,14 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 
 
 function ContactMe() {
+    e.preventDefault()
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,7 +19,7 @@ function ContactMe() {
         console.log('Sending data:', data); // Log data before sending
     
         try {
-            const response = await fetch('http://localhost:5000/api/messages', {
+            const response = await fetch('https://devinburkett.netlify.app/.netlify/functions/messages', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
@@ -26,6 +28,7 @@ function ContactMe() {
             console.log('Server response:', response); // Log server response
             if (response.ok) {
                 alert('Message sent successfully!');
+                navigate('/')
             } else {
                 alert('Failed to send the message.');
             }
