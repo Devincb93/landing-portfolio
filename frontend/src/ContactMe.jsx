@@ -5,6 +5,8 @@ import { useState } from 'react'
 
 
 function ContactMe() {
+
+    
     
 
     const [name, setName] = useState('')
@@ -13,7 +15,7 @@ function ContactMe() {
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        
     
         const data = { name, email, message };
         console.log('Sending data:', data); // Log data before sending
