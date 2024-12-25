@@ -11,7 +11,7 @@ function Home() {
         <div>
         <div className='flex justify-center items-center'>
             <h1 className='flex items-center text-center'>
-                {emoji}{emoji}THIS SITE IS UNDER CONSTRUCTION{emoji}{emoji}
+                {emoji}THIS SITE IS UNDER CONSTRUCTION{emoji}
             </h1>
         </div>  
         <Projects/>
