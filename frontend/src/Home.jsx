@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-     const emoji = <IoWarningOutline className='text-yellow-300'/>
+    const emoji = <IoWarningOutline className='text-yellow-300'/>
     return (
         <div>
         <div className='flex justify-center items-center'>
             <h1 className='flex items-center text-center'>
-                {emoji}THIS SITE IS UNDER CONSTRUCTION{emoji}
+                {emoji}{emoji}THIS SITE IS UNDER CONSTRUCTION{emoji}{emoji}
             </h1>
         </div>  
         <Projects/>

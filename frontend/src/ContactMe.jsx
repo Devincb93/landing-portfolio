@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 
 function ContactMe() {
-    e.preventDefault()
+    
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
