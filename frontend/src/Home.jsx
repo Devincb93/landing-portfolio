@@ -13,6 +13,8 @@ function Home() {
             <h1 className='flex items-center text-center'>
                 {emoji}THIS SITE IS UNDER CONSTRUCTION{emoji}
             </h1>
+
+            
         </div>  
         <Projects/>
         <AboutMe/>
