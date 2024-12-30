@@ -21,7 +21,7 @@ function ContactMe() {
         console.log('Sending data:', data); // Log data before sending
     
         try {
-            const response = await fetch('https://devinburkett.netlify.app/api/messages', {
+            const response = await fetch('https://devinburkett.netlify.app/.netlify/functions/messages', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
