@@ -1,27 +1,30 @@
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
-  host: "Gmail",
+  host: "smtp.gmail.com", // Correct SMTP server for Gmail
   port: 587,
   secure: false, // true for port 465, false for other ports
   auth: {
-    user: "maddison53@ethereal.email",
-    pass: "jn7jnAPss4f63QBp6D",
+    user: process.env.PERSONAL_EMAIL,
+    pass: process.env.PERSONAL_PW,
   },
 });
 
-async function main() {
-    // send mail with defined transport object
-    const info = await transporter.sendMail({
-      from: '"Maddison Foo Koch 👻" <maddison53@ethereal.email>', // sender address
-      to: "bar@example.com, baz@example.com", // list of receivers
-      subject: "Hello ✔", // Subject line
-      text: "Hello world?", // plain text body
-      html: "<b>Hello world?</b>", // html body
+// Function to send email
+async function sendEmail({ name, email, message }) {
+  try {
+    await transporter.sendMail({
+      from: `"${name}" <${email}>`, // Sender's address
+      to: process.env.PERSONAL_EMAIL, // Your personal email
+      subject: `New Message from ${name}`,
+      text: message,
+      html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Message:</b><br>${message}</p>`,
     });
-  
-    console.log("Message sent: %s", info.messageId);
-    // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
+    console.log("Email sent successfully!");
+  } catch (error) {
+    console.error("Error sending email:", error);
+    throw error;
   }
-  
-  main().catch(console.error);
+}
+
+module.exports = sendEmail;
