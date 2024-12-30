@@ -34,6 +34,9 @@ function ContactMe() {
             } else {
                 alert('Failed to send the message.');
             }
+
+
+            
         } catch (error) {
             console.error(error);
             alert('Error sending the message.');
