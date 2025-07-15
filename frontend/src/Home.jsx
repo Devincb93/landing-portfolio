@@ -1,9 +1,6 @@
-import React from 'react'
+
 import { IoWarningOutline } from "react-icons/io5";
-import Projects from './Projects';
-import AboutMe from './Aboutme';
-import { Link } from 'react-router-dom';
-import Swiper from 'swiper';
+
 import NavBar from './Navbar';
 
 function Home() {
@@ -30,8 +27,8 @@ function Home() {
             {/* Add more content here */}
         </div>
         </div>
-        <section>
-            fillers
+        <section className='mb-6'>
+            Hi, thanks for stopping by! I’m updating my site with new coding skills. Check back soon to see the changes.
         </section>
         {/* <Projects/> */}
         {/* <AboutMe/> */}
