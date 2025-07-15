@@ -1,9 +1,16 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
+import Swiper from 'swiper/bundle'
+import 'swiper/css/bundle';
+
+
+
 
 function Projects(){
+
+    // const swiper = new Swiper(...);
     return (
-        <div className='flex flex-col justify-center items-center'>
+        <div className='swiper flex flex-col justify-center items-center'>
             <h1 >
                     <TypeAnimation 
                     sequence={[
@@ -22,9 +29,9 @@ function Projects(){
                       style={{ fontSize: '15px', display: 'inline-block' }}
                       repeat={Infinity}
                     />
-                </h1>
+            </h1>
         
-        <div className='flex flex-col items-center'>
+        <div className=' swiper-wrapper flex flex-col items-center'>
                 
                 {/* <iframe  src="https://www.youtube.com/embed/QNlk6-UM8xE?si=0WUN1Ueiftme9KLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
                 
@@ -34,8 +41,8 @@ function Projects(){
                 
                 {/* <iframe className='m-1' src="https://www.youtube.com/embed/yCRbWpJ0EYE?si=-56hLG3Ro-MKRrKS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
             </div>
-
-            <div className='flex'>
+            <div className='swiper-wrapper'>
+            <div className='swiper- flex'>
                 <iframe className='m-1' src="https://www.youtube.com/embed/ugzF019kEkw?si=3SkKEeyy7qhWIcgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div className='w-72 text-sm mt-10 mb-10 bg-[#e8ddb5] rounded-md bg-opacity-30'>
                     <p className='text-[15px] w-72 text-center'>A CLI Menu app that allows users to manage books and authors</p>
@@ -45,8 +52,8 @@ function Projects(){
                 </div>
             </div>
 
-            <div className='flex'>
-            <iframe className='m-1' src="https://www.youtube.com/embed/Xyd-uvbcrV4?si=7E8zuAB7EqJpei7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div className='swiper-slide flex'>
+            <iframe className='m1 ' src="https://www.youtube.com/embed/Xyd-uvbcrV4?si=7E8zuAB7EqJpei7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div className='w-72 text-sm mt-10 mb-10 bg-[#e8ddb5] rounded-md bg-opacity-30'>
                     <p className='text-[15px] w-72 text-center'>An app where users can explore, save, and favorite recipes, with personalized collections for a seamless experience</p>
                     <li className='text-[10px]' >Developed with Flask for backend API, handling CRUD operations, user authentication, and sessions</li>
@@ -55,8 +62,8 @@ function Projects(){
                 </div>
             </div>
 
-            <div className='flex'>
-            <iframe className='m-1' src="https://www.youtube.com/embed/7WuaI1rrMUk?si=Pb2jFmNlaZo339Kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div className='swiper-slide flex'>
+            <iframe className='m-1 ' src="https://www.youtube.com/embed/7WuaI1rrMUk?si=Pb2jFmNlaZo339Kw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <div className='w-72 text-sm mt-10 mb-10 bg-[#e8ddb5] rounded-md bg-opacity-30'>
                     <p className='text-[15px] w-72 text-center'>An app that lets users easily join, leave, and manage queues, making wait times more organized and efficient</p>
                     <li className='text-[10px]' >Built with React for a dynamic frontend and Flask for backend API, enabling real-time queue management.</li>
@@ -64,7 +71,7 @@ function Projects(){
                     <li className='text-[10px]'>Improved queue management with React and Flask to enhance service efficiency</li>
                 </div>
             </div>
-
+        </div>
         </div>
         
            

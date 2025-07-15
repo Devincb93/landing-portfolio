@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Message = require('../models/Message');
-const sendEmail = require('../Email/Node.js')
+const sendEmail = require('../netlify/functions/Node.js')
 
 
 // POST: Save message and send email
