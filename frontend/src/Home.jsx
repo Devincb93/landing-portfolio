@@ -8,9 +8,11 @@ import { useEffect } from "react";
 function Home() {
 
     useEffect(()=> {
+        if (typeof window !== 'undefined'){
         gsap.timeline()
         .to("#pgraph1", { opacity:0, delay:1 })
         .to("#pgraph2", { opacity:1, delay:1 })
+        }
     }, [])
 
     
