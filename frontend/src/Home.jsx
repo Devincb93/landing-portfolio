@@ -2,8 +2,18 @@
 import { IoWarningOutline } from "react-icons/io5";
 
 import NavBar from './Navbar';
+import gsap from 'gsap';
+import { useEffect } from "react";
 
 function Home() {
+
+    useEffect(()=> {
+        gsap.timeline()
+        .to("#pgraph1", { opacity:0, delay:1 })
+        .to("#pgraph2", { opacity:1, delay:1 })
+    }, [])
+
+    
 
     const emoji = <IoWarningOutline className='text-yellow-300'/>
     return (
@@ -22,8 +32,12 @@ function Home() {
         </video>
 
         <div className="relative z-10 flex items-end p-8 h-full text-white">
+            <div></div>
             <h1 className="text-5xl font-bold mb-24">Hello, I’m Devin</h1>
-            <p className="max-w-xl ml-2 mb-24">Are you ready to begin?</p>
+            <div className=" relative mb-24">
+            <p id="pgraph1" className=" absolute max-w-xl ml-2 "> A Full stack Developer</p>
+            <p id="pgraph2" className="max-w-xl ml-2  opacity-0">Are you ready to begin?</p>
+            </div>
             {/* Add more content here */}
         </div>
         </div>
