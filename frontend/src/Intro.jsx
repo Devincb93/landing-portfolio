@@ -26,6 +26,15 @@ function Intro() {
             }
         })
     }
+    const handleNoClick = () => {
+        gsap.to(".intro-container",{
+            opacity:0,
+            duration:1,
+            onComplete: ()=> {
+                navigate("/nopage")
+            }
+        })
+    }
     
 
     const emoji = <IoWarningOutline className='text-yellow-300'/>
@@ -50,7 +59,7 @@ function Intro() {
                 </div>
                     <div id="buttons" className="opacity-0 flex mt-2">
                         <button onClick={handleYesClick} className="px-6 py-2 text-white backdrop-blur bg-white/5 border border-white/50 rounded-2xl hover:bg-white/30 transition">Yes</button>
-                        <button className="px-6 py-2 text-white backdrop-blur bg-white/5 border border-white/50 rounded-2xl hover:bg-white/20 transition ml-2" >No</button>
+                        <button onClick={handleNoClick} className="px-6 py-2 text-white backdrop-blur bg-white/5 border border-white/50 rounded-2xl hover:bg-white/20 transition ml-2" >No</button>
                     </div>
             </div>
                 

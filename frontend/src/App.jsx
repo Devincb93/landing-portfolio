@@ -4,6 +4,7 @@ import HomeContainer from './HomeContainer'
 // import Resume from './Resume';
 import ContactMe from './ContactMe';
 import MainPage from './MainPage';
+import NoPage from './NoPage';
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeContainer />} />
         <Route path="/mainpage" element={<MainPage/>}/>
+        <Route path="/nopage" element={<NoPage/>}/>
         <Route path="/contact" element={<ContactMe/>}/>
       </Routes>
     
