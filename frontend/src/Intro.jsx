@@ -1,12 +1,13 @@
 
 import { IoWarningOutline } from "react-icons/io5";
 
-import NavBar from './Navbar';
+
 import gsap from 'gsap';
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Home() {
-
+function Intro() {
+    const navigate = useNavigate()
     useEffect(()=> {
         if (typeof window !== 'undefined'){
         gsap.timeline()
@@ -16,14 +17,21 @@ function Home() {
         }
     }, [])
 
+    const handleYesClick = () => {
+        gsap.to(".intro-container",{
+            opacity:0,
+            duration:1,
+            onComplete: ()=> {
+                navigate("/mainpage")
+            }
+        })
+    }
     
 
     const emoji = <IoWarningOutline className='text-yellow-300'/>
     return (
-        <div>
-            
+        <div className="intro-container">
          <div className="relative w-full h-screen overflow-hidden">
-            {/* <NavBar/> */}
         <video
             autoPlay
             loop
@@ -41,7 +49,7 @@ function Home() {
                 <p id="pgraph2" className="max-w-xl  opacity-0">Are you ready to begin?</p>
                 </div>
                     <div id="buttons" className="opacity-0 flex mt-2">
-                        <button className="px-6 py-2 text-white backdrop-blur bg-white/5 border border-white/50 rounded-2xl hover:bg-white/30 transition">Yes</button>
+                        <button onClick={handleYesClick} className="px-6 py-2 text-white backdrop-blur bg-white/5 border border-white/50 rounded-2xl hover:bg-white/30 transition">Yes</button>
                         <button className="px-6 py-2 text-white backdrop-blur bg-white/5 border border-white/50 rounded-2xl hover:bg-white/20 transition ml-2" >No</button>
                     </div>
             </div>
@@ -51,4 +59,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Intro

@@ -1,4 +1,4 @@
-import Home from "./Home"
+import Intro from "./Intro"
 
 import NavBar from "./Navbar"
 
@@ -7,10 +7,7 @@ function HomeContainer(){
     return (
         <>
       <div >
-       
-       <Home/>
-       
-
+       <Intro/>
       </div>
       
     </>

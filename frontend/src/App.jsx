@@ -3,6 +3,7 @@ import './index.css'
 import HomeContainer from './HomeContainer'
 // import Resume from './Resume';
 import ContactMe from './ContactMe';
+import MainPage from './MainPage';
 
 
 
@@ -15,7 +16,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<HomeContainer />} />
-        {/* <Route path="/resume" element={<Resume />} /> */}
+        <Route path="/mainpage" element={<MainPage/>}/>
         <Route path="/contact" element={<ContactMe/>}/>
       </Routes>
     
