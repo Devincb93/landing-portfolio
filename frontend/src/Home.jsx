@@ -35,7 +35,7 @@ function Home() {
         </video>
 
         <div className="relative flex flex-col items-center justify-center h-full text-white">
-            <h1 className=" text-5xl sm:text-xl font-bold ">Hello, I’m Devin</h1>
+            <h1 className="text-5xl sm:text-4xl xs:text-2xl font-bold">Hello, I’m Devin</h1>
                 <div className="mt-4">
                 <p id="pgraph1" className="absolute max-w-xl ml-2">A Full stack Developer</p>
                 <p id="pgraph2" className="max-w-xl  opacity-0">Are you ready to begin?</p>
