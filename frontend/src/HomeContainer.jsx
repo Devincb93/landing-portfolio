@@ -7,7 +7,7 @@ function HomeContainer(){
     return (
         <>
       <div >
-       {/* <NavBar/> */}
+       
        <Home/>
        
 

@@ -10,8 +10,9 @@ function Home() {
     useEffect(()=> {
         if (typeof window !== 'undefined'){
         gsap.timeline()
-        .to("#pgraph1", { opacity:0, delay:1 })
-        .to("#pgraph2", { opacity:1, delay:1 })
+        .to("#pgraph1", { opacity:0, delay:3 })
+        .to("#pgraph2", { opacity:1, delay:.5 })
+        .to("#buttons", { opacity:1, delay:1.25 })
         }
     }, [])
 
@@ -33,22 +34,19 @@ function Home() {
             Your browser does not support the video tag.
         </video>
 
-        <div className="relative z-10 flex items-end p-8 h-full text-white">
-            <div></div>
-            <h1 className="text-5xl font-bold mb-24">Hello, I’m Devin</h1>
-            <div className=" relative mb-24">
-            <p id="pgraph1" className=" absolute max-w-xl ml-2 "> A Full stack Developer</p>
-            <p id="pgraph2" className="max-w-xl ml-2  opacity-0">Are you ready to begin?</p>
+        <div className="relative flex flex-col items-center justify-center h-full text-white">
+            <h1 className="text-5xl font-bold sm:text-xl">Hello, I’m Devin</h1>
+                <div className="mt-4">
+                <p id="pgraph1" className="absolute max-w-xl "> A Full stack Developer</p>
+                <p id="pgraph2" className="max-w-xl  opacity-0">Are you ready to begin?</p>
+                </div>
+                    <div id="buttons" className="opacity-0 flex mt-2">
+                        <button className="px-6 py-2 text-white backdrop-blur bg-white/5 border border-white/50 rounded-2xl hover:bg-white/30 transition">Yes</button>
+                        <button className="px-6 py-2 text-white backdrop-blur bg-white/5 border border-white/50 rounded-2xl hover:bg-white/20 transition ml-2" >No</button>
+                    </div>
             </div>
-            {/* Add more content here */}
-        </div>
-        </div>
-        <section className='mb-6'>
-            Hi, thanks for stopping by! I’m updating my site with new coding skills. Check back soon to see the changes.
-        </section>
-        {/* <Projects/> */}
-        {/* <AboutMe/> */}
-        
+                
+            </div>
         </div>
     )
 }
