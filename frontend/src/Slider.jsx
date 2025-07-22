@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
+import AboutMe from './Aboutme'
+
 
 const slideTexts = [
-  "01 Slide 1 Title",
-  "02 Slide 2 Title",
-  "03 Slide 3 Title",
-  "04 Slide 4 Title",
+  "01 About Me",
+  "02 Projects",
+  "03 Skills",
+  "04 Contact"
 ]
 
 const Slider = () => {
@@ -33,7 +35,7 @@ const Slider = () => {
       textRef.current.style.transform = "translateY(50px)"
     }, 300)
 
-    // Animate in
+    // Slide animation
     nextSlide.style.transition = "transform 2s ease"
     nextSlide.style.transform = "translateX(0%)"
 
@@ -52,7 +54,6 @@ const Slider = () => {
   }
 
   useEffect(() => {
-    // Set up slides
     slidesRef.current.forEach((slide, i) => {
       slide.style.zIndex = i === 0 ? 2 : 1
       slide.style.transform = i === 0 ? "translateX(0%)" : "translateX(100%)"
@@ -61,23 +62,43 @@ const Slider = () => {
 
   return (
     <div className='relative w-full h-screen overflow-hidden'>
-      <div className='text absolute top-[120px] left-[120px] text-white text-[60px] z-10 opacity-1 translate-y-[-50px]' ref={textRef}>
+      <div
+        className='absolute top-[120px] left-[120px] text-white text-[60px] z-10 opacity-1 translate-y-[-50px]'
+        ref={textRef}
+      >
         {slideTexts[0]}
       </div>
-      <div className='slider relative w-full h-full'>
-        {slideTexts.map((text, i) => (
-          <div
-            key={i}
-            className='slide absolute top-0 left-0 w-full h-full flex justify-center items-center text-white text-[50px] bg-blue'
-            ref={(el) => (slidesRef.current[i] = el)}
-          >
-            {`Slide ${i + 1}`}
-          </div>
-        ))}
+
+      <div className='relative w-full h-full'>
+        <div
+          ref={(el) => (slidesRef.current[0] = el)}
+          className='absolute w-full h-full top-0 left-0 bg-black text-white flex justify-center items-center'
+        >
+          <AboutMe />
+        </div>
+        <div
+          ref={(el) => (slidesRef.current[1] = el)}
+          className='absolute w-full h-full top-0 left-0 bg-black text-white flex justify-center items-center'
+        >
+          Projects
+        </div>
+        <div
+          ref={(el) => (slidesRef.current[2] = el)}
+          className='absolute w-full h-full top-0 left-0 bg-black text-white flex justify-center items-center'
+        >
+          Slide 3 – Skills
+        </div>
+        <div
+          ref={(el) => (slidesRef.current[3] = el)}
+          className='absolute w-full h-full top-0 left-0 bg-black text-white flex justify-center items-center'
+        >
+          Slide 4 – Contact
+        </div>
       </div>
+
       <button
         onClick={() => goToSlide(1)}
-        className='absolute bottom-[60px] right-[40px] bg-transparent border-none z-10 text-white text-xl'
+        className='absolute bottom-[60px] right-[40px] text-white text-xl z-10'
       >
         Next
       </button>
